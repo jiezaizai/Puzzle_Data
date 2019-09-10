@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             playerHashMap.put("id", cursor.getString(0));
             playerHashMap.put("name", cursor.getString(1));
             playerHashMap.put("score", cursor.getString(2));
+            playerHashMap.put("difficulty", cursor.getString(3));
             players.add(playerHashMap);
         }
         cursor.close();
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     this,
                     players,
                     R.layout.player_list_items,
-                    new String[]{"id","name","score"},
-                    new int[]{R.id.pid,R.id.pname,R.id.pscore}
+                    new String[]{"id","name","score","difficulty"},
+                    new int[]{R.id.pid,R.id.pname,R.id.pscore,R.id.pdiff}
             );
             myListView.setAdapter(mySimpleAdapter);
         }else{

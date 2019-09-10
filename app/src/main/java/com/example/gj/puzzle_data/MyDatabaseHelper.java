@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     final String CREATE_TABLE_SQL = "create table if not exists player (id integer PRIMARY KEY AUTOINCREMENT " +
-            "NOT NULL,name text,score integer)";
+            "NOT NULL,name text,score integer,difficulty integer)";
 
     private Context mcontext;
 
